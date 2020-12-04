@@ -7,5 +7,5 @@ terraform {
 }
 
 dependencies {
-  paths = ["..//vpc"]
+  paths = ["../vpc"]
 }
