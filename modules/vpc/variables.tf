@@ -16,9 +16,6 @@ variable "private_subnets" {
 variable "public_subnets" {
 }
 
-variable "name_prefix" {
-}
-
 variable "project_name" {
 }
 
