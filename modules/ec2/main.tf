@@ -14,7 +14,6 @@ data "aws_ami" "ubuntu" {
   owners = ["099720109477"] # Canonical
 }
 
-
 data "aws_vpc" "vpcs" {
   filter {
     name = "cidr-block-association.cidr-block"
@@ -26,7 +25,7 @@ data "aws_subnet_ids" "subids" {
   vpc_id = data.aws_vpc.vpcs.id
 
   tags = {
-    type = "private"
+    Type = "private"
   }
 }
 

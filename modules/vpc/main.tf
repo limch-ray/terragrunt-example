@@ -16,13 +16,16 @@ module "vpc" {
   private_subnets = local.private_subnets
   public_subnets  = local.public_subnets
 
-
   private_subnet_tags = {
-    type = "private"
+    Type = "private"
   }
 
   public_subnet_tags = {
-    type = "public"
+    Type = "public"
+  }
+
+  intra_subnet_tags = {
+    Type = "intra"
   }
 
   enable_nat_gateway = var.enable_nat_gateway
