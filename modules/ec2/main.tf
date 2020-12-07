@@ -1,3 +1,7 @@
+terraform {
+  required_version = ">= 0.14.0"
+}
+
 data "aws_ami" "ubuntu" {
   most_recent = true
 
@@ -17,7 +21,7 @@ data "aws_ami" "ubuntu" {
 data "aws_vpc" "vpcs" {
   filter {
     name = "cidr-block-association.cidr-block"
-    values = ["10.0.0.0/16"]
+    values = ["10.1.0.0/22"]
   }
 }
 

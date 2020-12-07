@@ -14,6 +14,7 @@ module "vpc" {
   source = "terraform-aws-modules/vpc/aws"
 
   name = "${var.project_name}-${var.environment}"
+  enable_dns_hostnames = true
   cidr = local.cidr
   azs = local.azs
   intra_subnets = local.intra_subnets
