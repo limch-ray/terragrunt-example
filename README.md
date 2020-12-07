@@ -1,4 +1,4 @@
-#How to run this
+# How to run this
 
 Make sure your aws cli is setup correctly
 
