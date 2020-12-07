@@ -1,6 +1,8 @@
 enable_nat_gateway = true
-cidr = "10.0.0.0/16"
-azs = ["ap-southeast-1a", "ap-southeast-1b", "ap-southeast-1c"]
-intra_subnets = ["10.0.1.0/24", "10.0.2.0/24", "10.0.3.0/24"]
-private_subnets = ["10.0.101.0/24", "10.0.102.0/24", "10.0.103.0/24"]
-public_subnets = ["10.0.201.0/24", "10.0.202.0/24", "10.0.203.0/24"]
+single_nat_gateway = false
+one_nat_gateway_per_az = true
+cidr = "10.1.0.0/22"
+azs = ["ap-southeast-1a", "ap-southeast-1b"]
+intra_subnets = ["10.1.0.0/25", "10.1.0.128/25"]
+private_subnets = ["10.1.1.0/25", "10.1.1.128/25"]
+public_subnets = ["10.1.2.0/25", "10.1.2.128/25"]
