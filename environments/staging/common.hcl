@@ -1,6 +1,6 @@
 locals {
   environment = "staging"
-  project_name = "ray"
+  project_name = "demo-terragrunt"
 }
 
 inputs = {

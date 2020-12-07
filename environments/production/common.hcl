@@ -1,9 +1,15 @@
 locals {
   environment = "production"
-  project_name = "ray"
+  project_name = "demo-terragrunt"
 }
 
 inputs = {
   aws_region = "ap-southeast-1"
-  project_env_prefix= "${local.project_name}-${local.environment}"
+  project_name = local.project_name
+  environment = local.environment
+  tags_common = {
+    Project =  local.project_name
+    Environment = local.environment
+    Terraform = true
+  }
 }
