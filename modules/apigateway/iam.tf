@@ -15,7 +15,7 @@ resource "aws_iam_policy" "test_policy" {
                 "sqs:ReceiveMessage",
                 "sqs:SendMessage"
             ],
-            "Resource": "arn:aws:sqs:ap-southeast-1:<account-id>:<queue-name>"
+            "Resource": "arn:aws:sqs:ap-southeast-1:${data.aws_caller_identity.current.account_id}:${var.project_name}-${var.environment}-se_gateway_bundle"
         }
     ]
 }

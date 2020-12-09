@@ -36,7 +36,7 @@ resource "aws_api_gateway_integration" "test_api_integration" {
   type                 = "AWS"
   integration_http_method = aws_api_gateway_method.test_api_method.http_method
   ### add account id and queue name here ###
-  uri = "arn:aws:apigateway:ap-southeast-1:sqs:path/<account-id>/<queue-name>"
+  uri = "arn:aws:apigateway:ap-southeast-1:sqs:path/${data.aws_caller_identity.current.account_id}/${var.project_name}-${var.environment}-se_gateway_bundle"
   credentials = aws_iam_role.test_role.arn
   passthrough_behavior = "NEVER"
 
