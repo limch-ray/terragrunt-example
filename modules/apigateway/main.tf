@@ -63,8 +63,10 @@ resource "aws_api_gateway_method_response" "response_200" {
   rest_api_id = aws_api_gateway_rest_api.test_api.id
   resource_id = aws_api_gateway_resource.test_api_resource_send.id
   http_method = aws_api_gateway_method.test_api_method.http_method
-  status_code = "200"
-  response_models = { "application/json" = "Empty" }
+  status_code = 200
+  response_models = { 
+    "application/json" = "Empty"
+  }
 }
 
 resource "aws_api_gateway_deployment" "MyDemoDeployment" {
